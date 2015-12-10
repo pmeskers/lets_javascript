@@ -4,7 +4,7 @@ class App {
   }
 
   run() {
-    console.log("Running " + this.name + "...");
+    console.log('Running ' + this.name + '...'); //eslint-disable-line no-console
   }
 }
 
