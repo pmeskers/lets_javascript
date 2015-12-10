@@ -1,2 +1,2 @@
-printFn = require('./message_printer.js');
+let printFn = require('./message_printer.js');
 printFn();
