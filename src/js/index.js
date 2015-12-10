@@ -1,2 +1,4 @@
-let printFn = require('./message_printer.js');
-printFn();
+let App = require('./app.js');
+
+let testApp = new App("Test App");
+testApp.run();
