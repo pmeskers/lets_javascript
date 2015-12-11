@@ -13,11 +13,12 @@ adding whatever other libraries you want.
 # put steps here for how to use this scaffold
 
 npm install
-npm install -g gulp   # Do we need this?
+npm install -g gulp
 
+gulp                  # Runs default gulp task 'lint'
 gulp dev              # Watches for JS changes and rebuilds 
 
-eslint src/index.js   # Runs linter against JS
+gulp lint             # Runs linter against JS
 ```
 
 ## Tools included
@@ -29,7 +30,6 @@ eslint src/index.js   # Runs linter against JS
 
 ## Working on next
 
-* eslint task for gulp
 * adding Jasmine for tests (including gulp task)
 * SCSS auto-compilation
 * HTML/build step
