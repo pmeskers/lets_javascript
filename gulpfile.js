@@ -1,7 +1,9 @@
 var gulp = require('gulp');
 var webpack = require('webpack');
+var webpackStream = require('webpack-stream');
 var gutil = require('gulp-util');
 var eslint = require('gulp-eslint');
+var jasmine = require('gulp-jasmine-browser');
 
 var webpackConfig = require('./webpack.config.js');
 
@@ -24,6 +26,16 @@ gulp.task('lint', function() {
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
+});
+
+gulp.task('jasmine', function() {
+  var JasminePlugin = require('gulp-jasmine-browser/webpack/jasmine-plugin');
+  var plugin = new JasminePlugin();
+
+  return gulp.src(['spec/js/*_spec.js'])
+    .pipe(webpackStream({watch: true, output: {filename: 'spec.js'}, plugins: [plugin]}))
+    .pipe(jasmine.specRunner())
+    .pipe(jasmine.server({whenReady: plugin.whenReady}));
 });
 
 gulp.task('dev', ['webpack'], function() {

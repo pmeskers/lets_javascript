@@ -31,6 +31,7 @@ gulp lint             # Runs linter against JS
 ## Working on next
 
 * adding Jasmine for tests (including gulp task)
+* switch over to webpack-stream for gulp task?
 * SCSS auto-compilation
 * HTML/build step
 * Web server
