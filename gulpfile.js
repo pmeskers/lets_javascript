@@ -15,7 +15,7 @@ gulp.task('dev', ['webpack', 'sass', 'copy-html'], function() {
   gulp.watch(['src/index.html'], ['copy-html']);
 });
 
-gulp.task('webpack', function(callback) {
+gulp.task('webpack', function() {
   return gulp.src(['src/js/index.js'])
     .pipe(webpack(webpackConfig))
     .pipe(gulp.dest('build/'));

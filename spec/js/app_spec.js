@@ -12,7 +12,7 @@ describe('App', function() {
 
     it('logs a message with the app name', function() {
       this.app.run();
-      expect(console.log).toHaveBeenCalledWith('Running Testable App...');
+      expect(console.log).toHaveBeenCalledWith('Running Testable App...'); //eslint-disable-line no-console
     });
   });
 });
