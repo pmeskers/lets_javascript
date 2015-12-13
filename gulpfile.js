@@ -9,9 +9,10 @@ var webpackConfig = require('./webpack.config.js');
 
 gulp.task('default', ['lint', 'jasmine-phantom']);
 
-gulp.task('dev', ['webpack'], function() {
+gulp.task('dev', ['webpack', 'sass', 'copy-html'], function() {
   gulp.watch(['src/js/**.js'], ['webpack']);
   gulp.watch(['src/css/*.scss'], ['sass']);
+  gulp.watch(['src/index.html'], ['copy-html']);
 });
 
 gulp.task('webpack', function(callback) {
@@ -23,7 +24,12 @@ gulp.task('webpack', function(callback) {
 gulp.task('sass', function() {
   gulp.src('src/css/index.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('build/css'));
+    .pipe(gulp.dest('build/'));
+});
+
+gulp.task('copy-html', function() {
+  gulp.src('src/index.html')
+    .pipe(gulp.dest('build/'));
 });
 
 gulp.task('lint', function() {
