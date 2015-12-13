@@ -15,10 +15,11 @@ adding whatever other libraries you want.
 npm install
 npm install -g gulp
 
-gulp                  # Runs default gulp task 'lint'
+gulp                  # Runs default gulp tasks 'lint' and 'jasmine-phantom'
+gulp lint             # Run eslint over all code
 gulp dev              # Watches for JS changes and rebuilds 
-
-gulp lint             # Runs linter against JS
+gulp jasmine          # Starts a Jasmine server on port 8888
+gulp jasmine-phantom  # Runs all Jasmine tests headlessly
 ```
 
 ## Tools included
@@ -27,11 +28,10 @@ gulp lint             # Runs linter against JS
 * [Babel](http://babeljs.io/)
 * [Gulp](http://gulpjs.com)
 * [eslint](http://eslint.org/)
+* [Jasmine](http://jasmine.github.io/)
 
 ## Working on next
 
-* adding Jasmine for tests (including gulp task)
-* switch over to webpack-stream for gulp task?
 * SCSS auto-compilation
 * HTML/build step
 * Web server

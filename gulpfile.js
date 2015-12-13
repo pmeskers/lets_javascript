@@ -1,9 +1,8 @@
 var gulp = require('gulp');
-var webpack = require('webpack');
-var webpackStream = require('webpack-stream');
-var gutil = require('gulp-util');
+var webpack = require('webpack-stream');
 var eslint = require('gulp-eslint');
 var jasmine = require('gulp-jasmine-browser');
+var _ = require('lodash');
 
 var webpackConfig = require('./webpack.config.js');
 
@@ -14,19 +13,13 @@ gulp.task('dev', ['webpack'], function() {
 });
 
 gulp.task('webpack', function(callback) {
-  var config = Object.create(webpackConfig);
-
-  webpack(config,function(error, stats) {
-    if(error) throw new gutil.PluginError('webpack', error);
-    gutil.log('[webpack:build]', stats.toString({
-      colors: true
-    }));
-    callback();
-  });
+  return gulp.src(['src/js/index.js'])
+    .pipe(webpack(webpackConfig))
+    .pipe(gulp.dest('build/'));
 });
 
 gulp.task('lint', function() {
-  return gulp.src(['src/js/*.js', './*.js'])
+  return gulp.src(['src/js/*.js', './*.js', 'spec/**/*.js'])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
@@ -34,15 +27,7 @@ gulp.task('lint', function() {
 
 gulp.task('jasmine-phantom', function() {
   return gulp.src(['spec/js/app_spec.js'])
-    .pipe(webpackStream({
-      module: {
-        loaders: [{
-          test: /\.js$/,
-          exclude: /node_modules/,
-          loader: 'babel'
-        }]
-      }
-    }))
+    .pipe(webpack(webpackConfig))
     .pipe(jasmine.specRunner({console: true}))
     .pipe(jasmine.headless());
 });
@@ -52,7 +37,10 @@ gulp.task('jasmine', function() {
   var plugin = new JasminePlugin();
 
   return gulp.src(['spec/js/*_spec.js'])
-    .pipe(webpackStream({watch: true, output: {filename: 'spec.js'}, plugins: [plugin]}))
+    .pipe(webpack(_.merge(webpackConfig, {
+      watch: true,
+      output: {filename: 'spec.js'},
+      plugins: [plugin]})))
     .pipe(jasmine.specRunner())
     .pipe(jasmine.server({whenReady: plugin.whenReady}));
 });
