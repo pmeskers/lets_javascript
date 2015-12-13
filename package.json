@@ -21,6 +21,7 @@
     "gulp-util": "^3.0.7",
     "lodash": "^3.10.1",
     "phantomjs": "^1.9.19",
+    "require-dir": "^0.3.0",
     "webpack": "^1.12.9",
     "webpack-stream": "^2.3.0"
   }
