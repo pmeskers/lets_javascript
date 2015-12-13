@@ -36,6 +36,5 @@ gulp                  # Runs default gulp tasks 'lint' and 'jasmine-phantom'
 
 ## Working on next
 
-* Separate out gulp tasks
 * Better console outputs for most tasks
 * React
