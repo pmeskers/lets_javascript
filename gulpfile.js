@@ -7,7 +7,11 @@ var jasmine = require('gulp-jasmine-browser');
 
 var webpackConfig = require('./webpack.config.js');
 
-gulp.task('default', ['lint']);
+gulp.task('default', ['lint', 'jasmine-phantom']);
+
+gulp.task('dev', ['webpack'], function() {
+  return gulp.watch(['src/js/**.js'], ['webpack']);
+});
 
 gulp.task('webpack', function(callback) {
   var config = Object.create(webpackConfig);
@@ -28,6 +32,21 @@ gulp.task('lint', function() {
     .pipe(eslint.failAfterError());
 });
 
+gulp.task('jasmine-phantom', function() {
+  return gulp.src(['spec/js/app_spec.js'])
+    .pipe(webpackStream({
+      module: {
+        loaders: [{
+          test: /\.js$/,
+          exclude: /node_modules/,
+          loader: 'babel'
+        }]
+      }
+    }))
+    .pipe(jasmine.specRunner({console: true}))
+    .pipe(jasmine.headless());
+});
+
 gulp.task('jasmine', function() {
   var JasminePlugin = require('gulp-jasmine-browser/webpack/jasmine-plugin');
   var plugin = new JasminePlugin();
@@ -38,6 +57,3 @@ gulp.task('jasmine', function() {
     .pipe(jasmine.server({whenReady: plugin.whenReady}));
 });
 
-gulp.task('dev', ['webpack'], function() {
-  return gulp.watch(['src/js/**.js'], ['webpack']);
-});

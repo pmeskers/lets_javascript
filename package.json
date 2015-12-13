@@ -17,6 +17,7 @@
     "gulp-eslint": "^1.1.1",
     "gulp-jasmine-browser": "^0.2.3",
     "gulp-util": "^3.0.7",
+    "phantomjs": "^1.9.19",
     "webpack": "^1.12.9",
     "webpack-stream": "^2.3.0"
   }
