@@ -17,7 +17,7 @@ npm install -g gulp
 
 gulp                  # Runs default gulp tasks 'lint' and 'jasmine-phantom'
 gulp lint             # Run eslint over all code
-gulp dev              # Watches for JS changes and rebuilds 
+gulp dev              # Watches for JS/CSS changes and rebuilds 
 gulp jasmine          # Starts a Jasmine server on port 8888
 gulp jasmine-phantom  # Runs all Jasmine tests headlessly
 ```
@@ -32,8 +32,6 @@ gulp jasmine-phantom  # Runs all Jasmine tests headlessly
 
 ## Working on next
 
-* SCSS auto-compilation
 * HTML/build step
 * Web server
-* Gulp task to keep all the things running during dev
-* Gulp task to run linter and specs
+* React
