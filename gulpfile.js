@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var webpack = require('webpack-stream');
 var eslint = require('gulp-eslint');
 var jasmine = require('gulp-jasmine-browser');
+var sass = require('gulp-sass');
 var _ = require('lodash');
 
 var webpackConfig = require('./webpack.config.js');
@@ -9,13 +10,20 @@ var webpackConfig = require('./webpack.config.js');
 gulp.task('default', ['lint', 'jasmine-phantom']);
 
 gulp.task('dev', ['webpack'], function() {
-  return gulp.watch(['src/js/**.js'], ['webpack']);
+  gulp.watch(['src/js/**.js'], ['webpack']);
+  gulp.watch(['src/css/*.scss'], ['sass']);
 });
 
 gulp.task('webpack', function(callback) {
   return gulp.src(['src/js/index.js'])
     .pipe(webpack(webpackConfig))
     .pipe(gulp.dest('build/'));
+});
+
+gulp.task('sass', function() {
+  gulp.src('src/css/index.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('build/css'));
 });
 
 gulp.task('lint', function() {
