@@ -3,13 +3,14 @@ var webpack = require('webpack-stream');
 var eslint = require('gulp-eslint');
 var jasmine = require('gulp-jasmine-browser');
 var sass = require('gulp-sass');
+var connect = require('gulp-connect');
 var _ = require('lodash');
 
 var webpackConfig = require('./webpack.config.js');
 
 gulp.task('default', ['lint', 'jasmine-phantom']);
 
-gulp.task('dev', ['webpack', 'sass', 'copy-html'], function() {
+gulp.task('dev', ['webpack', 'sass', 'copy-html', 'server'], function() {
   gulp.watch(['src/js/**.js'], ['webpack']);
   gulp.watch(['src/css/*.scss'], ['sass']);
   gulp.watch(['src/index.html'], ['copy-html']);
@@ -30,6 +31,12 @@ gulp.task('sass', function() {
 gulp.task('copy-html', function() {
   gulp.src('src/index.html')
     .pipe(gulp.dest('build/'));
+});
+
+gulp.task('server', function() {
+  connect.server({
+    root: 'build'
+  });
 });
 
 gulp.task('lint', function() {
