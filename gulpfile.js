@@ -34,7 +34,7 @@ gulp.task('lint', function() {
 });
 
 gulp.task('jasmine-phantom', function() {
-  return gulp.src(['spec/js/app_spec.js'])
+  return gulp.src(['spec/js/*_spec.js'])
     .pipe(webpack(webpackConfig))
     .pipe(jasmine.specRunner({console: true}))
     .pipe(jasmine.headless());
