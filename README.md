@@ -15,11 +15,15 @@ adding whatever other libraries you want.
 npm install
 npm install -g gulp
 
-gulp                  # Runs default gulp tasks 'lint' and 'jasmine-phantom'
+gulp dev              # Serves compiled src/ content on port 8080
+                      # Watches for JS/CSS/HTML changes, then rebuilds and reloads
+gulp dev-no-reload    # Same as dev, but without livereloading
+
 gulp lint             # Run eslint over all code
-gulp dev              # Watches for JS/CSS/HTML changes and rebuilds
 gulp jasmine          # Starts a Jasmine server on port 8888
 gulp jasmine-phantom  # Runs all Jasmine tests headlessly
+
+gulp                  # Runs default gulp tasks 'lint' and 'jasmine-phantom'
 ```
 
 ## Tools included
@@ -32,7 +36,6 @@ gulp jasmine-phantom  # Runs all Jasmine tests headlessly
 
 ## Working on next
 
-* Web server
 * Separate out gulp tasks
 * Better console outputs for most tasks
 * React
