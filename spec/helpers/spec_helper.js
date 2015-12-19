@@ -1,1 +1,0 @@
-require('./bind-polyfill.js');

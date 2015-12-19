@@ -1,22 +1,13 @@
-var ReactDOM = require('react-dom');
 var React = require('react');
+var ReactHelper = require('../helpers/react-helper');
 
 var App = require('../../src/js/app.js');
 
 describe('App', function() {
   beforeEach(function() {
-    this.el = document.createElement('div');
-    this.el.setAttribute('id', 'specHelper');
-    document.body.appendChild(this.el);
-
-    ReactDOM.render(
-      <App title="It's alive!"/>,
-      this.el
+    this.el = ReactHelper.render(
+      <App title="It's alive!"/>
     );
-  });
-
-  afterEach(function() {
-    document.body.removeChild(this.el);
   });
 
   describe('render', function() {

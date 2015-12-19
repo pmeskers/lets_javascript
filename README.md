@@ -4,7 +4,7 @@ A quick-and-dirty personal scaffold for throwing together a single
 page web app. Given how often the JS landscape changes, this is
 like the third one of these I've made.
 
-## How to use
+# How to use
 
 For now, just clone/download this repo, and start hacking away and
 adding whatever other libraries you want. 
@@ -38,5 +38,8 @@ gulp                  # Runs default gulp tasks 'lint' and 'jasmine-phantom'
 ## Working on next
 
 * Spec helpers for React component tests
+    * ~~Rendering~~
+    * Mocking
 * Maybe a base CSS framework, but probably not (basscss?)
 * Better console outputs for most tasks
+* Investigate packaging src/spec files as node packages
