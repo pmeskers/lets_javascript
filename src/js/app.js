@@ -1,11 +1,15 @@
-class App {
-  constructor(name) {
-    this.name = name;
-  }
+var React = require('react');
 
-  run() {
-    console.log('Running ' + this.name + '...'); //eslint-disable-line no-console
+class App extends React.Component {
+  render() {
+    return (
+      <h1>{this.props.title}</h1>
+    );
   }
 }
+
+App.propTypes = {
+  title: React.PropTypes.string
+};
 
 module.exports = App;

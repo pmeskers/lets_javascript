@@ -1,18 +1,27 @@
+var ReactDOM = require('react-dom');
+var React = require('react');
+
 var App = require('../../src/js/app.js');
 
 describe('App', function() {
   beforeEach(function() {
-    this.app = new App('Testable App');
+    this.el = document.createElement('div');
+    this.el.setAttribute('id', 'specHelper');
+    document.body.appendChild(this.el);
+
+    ReactDOM.render(
+      <App title="It's alive!"/>,
+      this.el
+    );
   });
 
-  describe('#run', function() {
-    beforeEach(function() {
-      spyOn(console, 'log');
-    });
+  afterEach(function() {
+    document.body.removeChild(this.el);
+  });
 
-    it('logs a message with the app name', function() {
-      this.app.run();
-      expect(console.log).toHaveBeenCalledWith('Running Testable App...'); //eslint-disable-line no-console
+  describe('render', function() {
+    it('displays the provided title', function() {
+      expect(this.el.textContent).toEqual('It\'s alive!');
     });
   });
 });
