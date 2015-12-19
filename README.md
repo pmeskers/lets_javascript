@@ -33,8 +33,10 @@ gulp                  # Runs default gulp tasks 'lint' and 'jasmine-phantom'
 * [Gulp](http://gulpjs.com)
 * [eslint](http://eslint.org/)
 * [Jasmine](http://jasmine.github.io/)
+* [React](https://facebook.github.io/react/)
 
 ## Working on next
 
+* Spec helpers for React component tests
+* Maybe a base CSS framework, but probably not (basscss?)
 * Better console outputs for most tasks
-* React
