@@ -40,6 +40,10 @@ gulp                  # Runs default gulp tasks 'lint' and 'jasmine-phantom'
 * Spec helpers for React component tests
     * ~~Rendering~~
     * Mocking
+* Fix filename inconsistencies
+* Fix var/let inconsistencies
+* More complex examples
+* Create deploy tasks (minifying, uglifying, CF manifest?)
 * Maybe a base CSS framework, but probably not (basscss?)
 * Better console outputs for most tasks
 * Investigate packaging src/spec files as node packages
