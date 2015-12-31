@@ -7,7 +7,7 @@ var _ = require('lodash');
 
 var webpackConfig = require('../webpack.config.js');
 
-var jasmineSrcFiles = ['spec/helpers/spec-helper.js', 'spec/js/*_spec.js'];
+var jasmineSrcFiles = ['spec/helpers/spec-helper.js', 'spec/**/*_spec.js'];
 
 gulp.task('lint', function() {
   return gulp.src(['src/js/*.js', './*.js', 'spec/**/*.js'])

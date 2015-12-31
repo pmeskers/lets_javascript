@@ -26,6 +26,9 @@ gulp jasmine-phantom  # Runs all Jasmine tests headlessly
 gulp                  # Runs default gulp tasks 'lint' and 'jasmine-phantom'
 ```
 
+When using this scaffold, feel free to remove any tests from `spec/lib/` -- these are tests
+that test the scaffold behavior itself (such as the ReactHelper).
+
 ## Tools included
 
 * [Webpack](https://github.com/webpack/webpack)
@@ -39,7 +42,8 @@ gulp                  # Runs default gulp tasks 'lint' and 'jasmine-phantom'
 
 * Spec helpers for React component tests
     * ~~Rendering~~
-    * Mocking
+    * ~~Mocking~~
+    * Basic docs on how to use
 * Fix filename inconsistencies
 * Fix var/let inconsistencies
 * More complex examples
