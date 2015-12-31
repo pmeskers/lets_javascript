@@ -44,8 +44,7 @@ that test the scaffold behavior itself (such as the ReactHelper).
     * ~~Rendering~~
     * ~~Mocking~~
     * Basic docs on how to use
-* Fix filename inconsistencies
-* Fix var/let inconsistencies
+* Fix filename inconsistencies (- vs _, I guess?)
 * More complex examples
 * Create deploy tasks (minifying, uglifying, CF manifest?)
 * Maybe a base CSS framework, but probably not (basscss?)

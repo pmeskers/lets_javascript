@@ -1,7 +1,6 @@
-let React = require('react');
-let ReactDOM = require('react-dom');
-
-let App = require('./app.js');
+var React = require('react');
+var ReactDOM = require('react-dom');
+var App = require('./app.js');
 
 function run() {
   ReactDOM.render(

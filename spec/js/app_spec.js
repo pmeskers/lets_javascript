@@ -1,11 +1,11 @@
 var React = require('react');
-var ReactHelper = require('../helpers/react-helper');
+var reactHelper = require('../helpers/react-helper');
 
 var App = require('../../src/js/app.js');
 
 describe('App', function() {
   beforeEach(function() {
-    this.el = ReactHelper.render(
+    this.el = reactHelper.render(
       <App title="It's alive!"/>
     );
   });

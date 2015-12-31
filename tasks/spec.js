@@ -24,8 +24,8 @@ gulp.task('jasmine-phantom', function() {
 });
 
 gulp.task('jasmine', function() {
-  var JasminePlugin = require('gulp-jasmine-browser/webpack/jasmine-plugin');
-  var plugin = new JasminePlugin();
+  let JasminePlugin = require('gulp-jasmine-browser/webpack/jasmine-plugin');
+  let plugin = new JasminePlugin();
 
   return gulp.src(jasmineSrcFiles)
     .pipe(webpack(_.merge(webpackConfig, {
