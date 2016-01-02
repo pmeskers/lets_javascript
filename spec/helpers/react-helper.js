@@ -33,7 +33,7 @@ class ReactHelper {
       renderFn: component.prototype.render
     };
 
-    component.prototype.render = function() {
+    component.prototype.render = function mockRender() {
       return (<div/>);
     };
   }
