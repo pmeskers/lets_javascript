@@ -18,6 +18,7 @@ gulp.task('dev-no-reload', ['webpack', 'sass', 'copy-html', 'server-no-reload'],
 });
 
 gulp.task('webpack', function() {
+  webpackConfig.devtool = 'cheap-module-eval-source-map';
   return gulp.src(['src/js/index.js'])
     .pipe(webpack(webpackConfig))
     .pipe(gulp.dest('build/'))
