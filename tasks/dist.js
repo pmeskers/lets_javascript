@@ -6,7 +6,7 @@ var uglify = require('gulp-uglify');
 
 var webpackConfig = require('../webpack.config.js');
 
-gulp.task('dist', ['sass-dist', 'copy-html-dist', 'uglify-dist']);
+gulp.task('dist', ['sass-dist', 'html-dist', 'js-dist']);
 
 gulp.task('sass-dist', function() {
   return gulp.src('src/css/index.scss')
@@ -14,14 +14,17 @@ gulp.task('sass-dist', function() {
     .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('copy-html-dist', function() {
+gulp.task('html-dist', function() {
   return gulp.src('src/index.html')
     .pipe(gulp.dest('dist/'))
     .pipe(connect.reload());
 });
 
-gulp.task('uglify-dist', ['webpack'], function() {
-  return gulp.src('build/index.js')
+gulp.task('js-dist', ['webpack-uglify-dist']);
+
+gulp.task('webpack-uglify-dist', function() {
+  return gulp.src(['src/js/index.js'])
+    .pipe(webpack(webpackConfig))
     .pipe(uglify())
-    .pipe(gulp.dest('dist/'));
+    .pipe(gulp.dest('dist/'))
 });
