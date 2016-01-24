@@ -1,5 +1,7 @@
 # Let's JavaScript
 
+![CI Status](https://travis-ci.org/pmeskers/lets_javascript.svg?branch=master)
+
 A quick-and-dirty personal scaffold for throwing together a single page web app. Given how often the JS landscape changes, this is like the third one of these I've made.
 
 # How to use
