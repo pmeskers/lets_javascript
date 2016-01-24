@@ -70,6 +70,8 @@ this.el = ReactHelper.render(
 ); // this will render an empty div
 ```
 
+*Note: This differs from the React's Test Utilities `mockComponent` function by choosing not to render any children of mocked components.*
+
 **setup()**
 
 This function should be called before any other ReactHelper methods are. In this scaffold, it is done globally in `spec/helpers/spec_helper.js`.

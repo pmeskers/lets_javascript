@@ -24,7 +24,7 @@ class ReactHelper {
       jsx,
       this._el
     );
-    return this._el;
+    return this._el.firstChild;
   }
 
   mockComponent(component) {
