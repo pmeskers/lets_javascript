@@ -1,6 +1,6 @@
 require('./bind-polyfill.js');
 
-var reactHelper = require('./react-helper.js');
+var reactHelper = require('jasmine-react-helper');
 
 beforeEach(function() {
   reactHelper.setup();

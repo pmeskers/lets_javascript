@@ -1,5 +1,5 @@
 var React = require('react');
-var reactHelper = require('../helpers/react-helper');
+var reactHelper = require('jasmine-react-helper');
 
 var App = require('../../src/js/app.js');
 

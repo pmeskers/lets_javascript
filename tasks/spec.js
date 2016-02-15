@@ -2,7 +2,6 @@ var gulp = require('gulp');
 var webpack = require('webpack-stream');
 var eslint = require('gulp-eslint');
 var jasmine = require('gulp-jasmine-browser');
-var sass = require('gulp-sass');
 var _ = require('lodash');
 
 var webpackConfig = require('../webpack.config.js');
