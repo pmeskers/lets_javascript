@@ -6,8 +6,8 @@ var connect = require('gulp-connect');
 var webpackConfig = require('../webpack.config.js');
 
 gulp.task('dev', ['webpack', 'sass', 'copy-html', 'server'], function() {
-  gulp.watch(['src/js/**.js'], ['webpack']);
-  gulp.watch(['src/css/*.scss'], ['sass']);
+  gulp.watch(['src/js/**/*.js'], ['webpack']);
+  gulp.watch(['src/css/**/*.scss'], ['sass']);
   gulp.watch(['src/index.html'], ['copy-html']);
 });
 
