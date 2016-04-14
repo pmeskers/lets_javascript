@@ -27,10 +27,10 @@ gulp.task('jasmine', function() {
   var plugin = new JasminePlugin();
 
   return gulp.src(jasmineSrcFiles)
-    .pipe(webpack(_.merge(webpackConfig, {
+    .pipe(webpack(_.merge({
       watch: true,
       output: {filename: 'spec.js'},
-      plugins: [plugin]})))
+      plugins: [plugin]}, webpackConfig)))
     .pipe(jasmine.specRunner())
     .pipe(jasmine.server({whenReady: plugin.whenReady}));
 });
