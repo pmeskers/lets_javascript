@@ -1,10 +1,8 @@
-# Let's JavaScript
+# Let's JavaScript, Angular 2 Edition
 
 ![CI Status](https://travis-ci.org/pmeskers/lets_javascript.svg?branch=master)
 
 A quick-and-dirty personal scaffold for throwing together a single page web app. Given how often the JS landscape changes, this is like the third one of these I've made.
-
-# Special Angular 2 Edition
 
 # How to use
 
@@ -32,6 +30,7 @@ gulp dist             # Builds a production version of the application into 'dis
 
 ## Tools included
 
+* [Angular](https://angular.io/)
 * [Typescript](https://www.typescriptlang.org/)
 * [Webpack](https://github.com/webpack/webpack)
 * [Gulp](http://gulpjs.com)

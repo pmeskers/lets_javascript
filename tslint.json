@@ -1,5 +1,5 @@
 {
-  "extends": "tslint:latest",
+  "extends": "tslint:recommended",
   "rules": {
     "indent": [true, "spaces"],
     "quotemark": [true, "single", "avoid-escape"],
