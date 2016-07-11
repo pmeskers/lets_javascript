@@ -45,12 +45,7 @@ This scaffold uses a work-in-progress helper for testing React components using 
 
 ## Working on next
 
-* Fix filename inconsistencies (- vs _, I guess?)
-* Extracting ReactHelper into its own repo/node module
-	* improving documentation
-	* providing error messages when used incorrectly
-	* its own test suite
+* Consider replacing ReactHelper with enzyme
 * More complex examples
 * Maybe a base CSS framework, but probably not (basscss?)
 * Better console outputs for most tasks
-* Investigate packaging src/spec files as node packages
