@@ -4,6 +4,8 @@
 
 A quick-and-dirty personal scaffold for throwing together a single page web app. Given how often the JS landscape changes, this is like the third one of these I've made.
 
+For the Angular 2 version, see [here](https://github.com/pmeskers/lets_javascript/tree/typescript-angular-2)!
+
 # How to use
 
 For now, just clone/download this repo, and start hacking away and adding whatever other libraries you want. 
@@ -27,8 +29,6 @@ gulp                  # Runs default gulp tasks 'lint' and 'jasmine-phantom'
 gulp dist             # Builds a production version of the application into 'dist/'
                       # Includes uglification/minification/no source maps.
 ```
-
-When using this scaffold, feel free to remove any tests from `spec/lib/` -- these are tests that test the scaffold behavior itself (such as the ReactHelper).
 
 ## Tools included
 
