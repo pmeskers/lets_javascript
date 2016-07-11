@@ -1,6 +1,8 @@
 # Let's JavaScript, Angular 2 Edition
 
-![CI Status](https://travis-ci.org/pmeskers/lets_javascript.svg?branch=master)
+React Edition ![CI Status](https://travis-ci.org/pmeskers/lets_javascript.svg?branch=master)
+
+Angular 2 Edition ![CI Status](https://travis-ci.org/pmeskers/lets_javascript.svg?branch=typescript-angular-2)
 
 A quick-and-dirty personal scaffold for throwing together a single page web app. Given how often the JS landscape changes, this is like the third one of these I've made.
 
