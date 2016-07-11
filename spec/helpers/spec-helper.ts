@@ -17,8 +17,8 @@ setBaseTestProviders(
   TEST_BROWSER_DYNAMIC_APPLICATION_PROVIDERS);
 
 // Prepare TestComponentBuilder
-import { 
-  addProviders, 
+import {
+  addProviders,
   TestComponentBuilder,
   inject,
 } from '@angular/core/testing';
