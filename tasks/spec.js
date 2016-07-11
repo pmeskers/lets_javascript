@@ -6,10 +6,10 @@ var _ = require('lodash');
 
 var webpackConfig = require('../webpack.config.js');
 
-var jasmineSrcFiles = ['spec/helpers/spec-helper.js', 'spec/**/*_spec.js'];
+var jasmineSrcFiles = ['spec/helpers/spec-helper.js', 'spec/**/*_spec.ts'];
 
 gulp.task('lint', function() {
-  return gulp.src(['src/js/*.js', './*.js', 'spec/**/*.js'])
+  return gulp.src(['src/js/*.ts', './*.ts', 'spec/**/*.ts'])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
