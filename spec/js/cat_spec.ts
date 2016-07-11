@@ -3,12 +3,12 @@ import { Cat } from '../../src/js/cat.ts';
 describe('Cat', function() {
   let cat;
 
-  beforeEach(function() {
+  beforeEach(() => {
     cat = new Cat();
   });
 
-  describe('#getMeow', function() {
-    it('returns a meow', function() {
+  describe('#getMeow', () => {
+    it('returns a meow', () => {
       expect(cat.getMeow()).toEqual('meow');
     });
   });
