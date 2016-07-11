@@ -23,7 +23,7 @@ gulp.task('html-dist', function() {
 gulp.task('js-dist', ['webpack-uglify-dist']);
 
 gulp.task('webpack-uglify-dist', function() {
-  return gulp.src(['src/js/index.js'])
+  return gulp.src(['src/js/index.ts'])
     .pipe(webpack(webpackConfig))
     .pipe(uglify())
     .pipe(gulp.dest('dist/'))

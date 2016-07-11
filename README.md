@@ -35,7 +35,6 @@ When using this scaffold, feel free to remove any tests from `spec/lib/` -- thes
 ## Tools included
 
 * [Webpack](https://github.com/webpack/webpack)
-* [Babel](http://babeljs.io/)
 * [Gulp](http://gulpjs.com)
 * [eslint](http://eslint.org/)
 * [Jasmine](http://jasmine.github.io/)
