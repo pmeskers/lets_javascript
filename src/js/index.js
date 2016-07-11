@@ -1,12 +1,5 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var App = require('./app.js');
-
 function run() {
-  ReactDOM.render(
-    <App title='welcome.'/>,
-    document.getElementById('app')
-  );
+  document.querySelector('body').innerHTML = 'oh wowwww';
 }
 
 if (document.readyState != 'loading') {

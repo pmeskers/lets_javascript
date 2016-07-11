@@ -4,6 +4,8 @@
 
 A quick-and-dirty personal scaffold for throwing together a single page web app. Given how often the JS landscape changes, this is like the third one of these I've made.
 
+# Special Angular 2 Edition
+
 # How to use
 
 For now, just clone/download this repo, and start hacking away and adding whatever other libraries you want. 
@@ -37,15 +39,3 @@ When using this scaffold, feel free to remove any tests from `spec/lib/` -- thes
 * [Gulp](http://gulpjs.com)
 * [eslint](http://eslint.org/)
 * [Jasmine](http://jasmine.github.io/)
-* [React](https://facebook.github.io/react/)
-
-## ReactHelper
-
-This scaffold uses a work-in-progress helper for testing React components using Jasmine. You can see its progress and learn more about it [here](https://github.com/pmeskers/jasmine-react-helper).
-
-## Working on next
-
-* Consider replacing ReactHelper with enzyme
-* More complex examples
-* Maybe a base CSS framework, but probably not (basscss?)
-* Better console outputs for most tasks
