@@ -30,8 +30,6 @@ gulp dist             # Builds a production version of the application into 'dis
                       # Includes uglification/minification/no source maps.
 ```
 
-When using this scaffold, feel free to remove any tests from `spec/lib/` -- these are tests that test the scaffold behavior itself (such as the ReactHelper).
-
 ## Tools included
 
 * [Typescript](https://www.typescriptlang.org/)
