@@ -1,7 +1,7 @@
 import { Cat } from '../../src/js/cat.ts';
 
 describe('Cat', function() {
-  var cat;
+  let cat;
 
   beforeEach(function() {
     cat = new Cat();

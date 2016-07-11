@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var webpack = require('webpack-stream');
-var eslint = require('gulp-eslint');
+var tslint = require('gulp-tslint');
 var jasmine = require('gulp-jasmine-browser');
 var _ = require('lodash');
 
@@ -10,9 +10,10 @@ var jasmineSrcFiles = ['spec/helpers/spec-helper.js', 'spec/**/*_spec.ts'];
 
 gulp.task('lint', function() {
   return gulp.src(['src/js/*.ts', './*.ts', 'spec/**/*.ts'])
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
+    .pipe(tslint({
+      formatter: 'verbose'
+    }))
+    .pipe(tslint.report());
 });
 
 gulp.task('jasmine-phantom', function() {

@@ -34,7 +34,8 @@ When using this scaffold, feel free to remove any tests from `spec/lib/` -- thes
 
 ## Tools included
 
+* [Typescript](https://www.typescriptlang.org/)
 * [Webpack](https://github.com/webpack/webpack)
 * [Gulp](http://gulpjs.com)
-* [eslint](http://eslint.org/)
+* [tslint](https://github.com/palantir/tslint)
 * [Jasmine](http://jasmine.github.io/)

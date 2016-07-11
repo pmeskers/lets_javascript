@@ -1,5 +1,5 @@
 export class Cat {
-  getMeow(): string {
+  public getMeow(): string {
     return 'meow';
   }
 }
