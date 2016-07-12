@@ -3,6 +3,7 @@
   "rules": {
     "indent": [true, "spaces"],
     "quotemark": [true, "single", "avoid-escape"],
-    "semicolon": [true, "always"]
+    "semicolon": [true, "always"],
+    "object-literal-sort-keys": false
   }
 }
