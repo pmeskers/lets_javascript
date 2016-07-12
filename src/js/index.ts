@@ -1,10 +1,10 @@
 import 'reflect-metadata';
 import 'zone.js';
 import { bootstrap } from '@angular/platform-browser-dynamic';
-import { Cat } from './components/cat.component.ts';
+import { App } from 'app.component';
 
 let run = () => {
-  bootstrap(Cat);
+  bootstrap(App);
 };
 
 if (document.readyState !== 'loading') {

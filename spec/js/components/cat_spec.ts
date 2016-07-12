@@ -1,4 +1,4 @@
-import { Cat } from '../../../src/js/components/cat.component.ts';
+import { Cat } from 'cat.component.ts';
 
 describe('Cat', function() {
   describe('render', function() {
