@@ -1,6 +1,5 @@
 import { ColorStore } from 'color-store.service';
 import { Component } from '@angular/core';
-import { Cat } from 'cat.component';
 import { ColorDisplay } from 'color-display.component';
 import { ColorPicker } from 'color-picker.component';
 
@@ -8,7 +7,6 @@ import { ColorPicker } from 'color-picker.component';
   selector: 'app',
   template: `
     <div>
-      <cat></cat>
       <div class='container'>
         <color-picker></color-picker>
         <color-display [color]="selectedColor"></color-display>
@@ -18,7 +16,7 @@ import { ColorPicker } from 'color-picker.component';
   styles: [`
     .container { width: 50%; margin: 50px 25%; }
   `],
-  directives: [Cat, ColorDisplay, ColorPicker],
+  directives: [ColorDisplay, ColorPicker],
   providers: [ColorStore],
 })
 export class App {
