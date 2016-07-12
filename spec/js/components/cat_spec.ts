@@ -7,9 +7,8 @@ describe('Cat', function() {
       this.element = fixture.nativeElement;
     });
 
-    it('renders a meow', function(done) {
+    it('renders a meow', function() {
       expect(this.element.textContent).toEqual('~ meow ~');
-      done();
     });
   });
 });
