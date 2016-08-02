@@ -17,5 +17,13 @@ module.exports = {
     root: [
       path.resolve('./src/ts')
     ]
+  },
+  externals: {
+    // These three are required by enzyme...
+    // https://github.com/airbnb/enzyme/issues/47
+    'react/lib/ExecutionEnvironment': true,
+    'react/lib/ReactContext': true,
+    'react/addons': true,
+    'cheerio': 'window'
   }
 };
