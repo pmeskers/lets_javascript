@@ -6,6 +6,9 @@ A quick-and-dirty personal scaffold for throwing together a single page web app.
 
 For the Angular 2 version, see [here](https://github.com/pmeskers/lets_javascript/tree/typescript-angular-2)!
 
+For the Typescript & Redux version, see [here](https://github.com/pmeskers/lets_javascript/tree/typescript-react-redux).
+It's likely that this will be the next "default" version of this scaffold.
+
 # How to use
 
 For now, just clone/download this repo, and start hacking away and adding whatever other libraries you want. 
