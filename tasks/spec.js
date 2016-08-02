@@ -13,10 +13,9 @@ gulp.task('lint', function() {
     .pipe(tslint({
       formatter: 'stylish'
     }))
-    .pipe(tslint.report({ emitError: true }));
-    // .pipe(tslint.report({
-      // summarizeFailureOutput: true
-    // }));
+    .pipe(tslint.report({
+      summarizeFailureOutput: true
+    }));
 });
 
 gulp.task('jasmine-phantom', function() {
