@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var webpack = require('webpack-stream');
 var sass = require('gulp-sass');
 var connect = require('gulp-connect');
+var prettyError = require('gulp-prettyerror');
 
 var webpackConfig = require('../webpack.config.js');
 
@@ -19,6 +20,7 @@ gulp.task('dev-no-reload', ['webpack', 'sass', 'copy-html', 'server-no-reload'],
 
 gulp.task('webpack', function() {
   return gulp.src(['src/ts/index.tsx'])
+    .pipe(prettyError())
     .pipe(webpack(webpackConfig))
     .pipe(gulp.dest('build/'))
     .pipe(connect.reload());
