@@ -1,3 +1,5 @@
+let path = require('path');
+
 module.exports = {
   output: {
     filename: 'index.js'
@@ -11,6 +13,9 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['', '.ts', '.tsx', '.js']
+    extensions: ['', '.ts', '.tsx', '.js'],
+    root: [
+      path.resolve('./src/ts')
+    ]
   }
 };
