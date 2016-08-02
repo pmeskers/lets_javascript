@@ -1,8 +1,11 @@
-# Let's JavaScript
+# Let's JavaScript 
+## TypeScript, React, Redux
 
-![CI Status](https://travis-ci.org/pmeskers/lets_javascript.svg?branch=master)
+![CI Status](https://travis-ci.org/pmeskers/lets_javascript.svg?branch=typescript-react-redux)
 
 A quick-and-dirty personal scaffold for throwing together a single page web app. Given how often the JS landscape changes, this is like the third one of these I've made.
+
+For the original version, see [here](https://github.com/pmeskers/lets_javascript/)!
 
 For the Angular 2 version, see [here](https://github.com/pmeskers/lets_javascript/tree/typescript-angular-2)!
 
@@ -20,7 +23,7 @@ gulp dev              # Serves compiled src/ content on port 8080
                       # Watches for JS/CSS/HTML changes, then rebuilds and reloads
 gulp dev-no-reload    # Same as dev, but without livereloading
 
-gulp lint             # Run eslint over all code
+gulp lint             # Run tslint over all code
 gulp jasmine          # Starts a Jasmine server on port 8888
 gulp jasmine-phantom  # Runs all Jasmine tests headlessly
 
@@ -32,20 +35,10 @@ gulp dist             # Builds a production version of the application into 'dis
 
 ## Tools included
 
+* [TypeScript](https://www.typescriptlang.org/)
 * [Webpack](https://github.com/webpack/webpack)
-* [Babel](http://babeljs.io/)
 * [Gulp](http://gulpjs.com)
-* [eslint](http://eslint.org/)
+* [tslint](https://github.com/palantir/tslint)
 * [Jasmine](http://jasmine.github.io/)
 * [React](https://facebook.github.io/react/)
-
-## ReactHelper
-
-This scaffold uses a work-in-progress helper for testing React components using Jasmine. You can see its progress and learn more about it [here](https://github.com/pmeskers/jasmine-react-helper).
-
-## Working on next
-
-* Consider replacing ReactHelper with enzyme
-* More complex examples
-* Maybe a base CSS framework, but probably not (basscss?)
-* Better console outputs for most tasks
+* [Enzyme](https://github.com/airbnb/enzyme)
