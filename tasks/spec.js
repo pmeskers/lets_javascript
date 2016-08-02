@@ -9,11 +9,14 @@ var webpackConfig = require('../webpack.config.js');
 var jasmineSrcFiles = ['spec/**/*_spec.ts', 'spec/**/*_spec.tsx'];
 
 gulp.task('lint', function() {
-  return gulp.src(['src/ts/**/*.tsx'])
+  return gulp.src(['src/ts/**/*.tsx', 'spec/**/*.tsx'])
     .pipe(tslint({
       formatter: 'stylish'
     }))
-    .pipe(tslint.report());
+    .pipe(tslint.report({ emitError: true }));
+    // .pipe(tslint.report({
+      // summarizeFailureOutput: true
+    // }));
 });
 
 gulp.task('jasmine-phantom', function() {
