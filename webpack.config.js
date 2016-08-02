@@ -5,10 +5,12 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel'
+        test: /\.tsx?$/,
+        loader: 'ts-loader'
       }
     ]
+  },
+  resolve: {
+    extensions: ['', '.ts', '.tsx', '.js']
   }
 };

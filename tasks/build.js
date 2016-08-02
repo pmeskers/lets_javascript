@@ -6,20 +6,19 @@ var connect = require('gulp-connect');
 var webpackConfig = require('../webpack.config.js');
 
 gulp.task('dev', ['webpack', 'sass', 'copy-html', 'server'], function() {
-  gulp.watch(['src/js/**/*.js'], ['webpack']);
+  gulp.watch(['src/js/**/*.ts', 'src/js/**/*.tsx'], ['webpack']);
   gulp.watch(['src/css/**/*.scss'], ['sass']);
   gulp.watch(['src/index.html'], ['copy-html']);
 });
 
 gulp.task('dev-no-reload', ['webpack', 'sass', 'copy-html', 'server-no-reload'], function() {
-  gulp.watch(['src/js/**.js'], ['webpack']);
+  gulp.watch(['src/js/**/*.ts', 'src/js/**/*.tsx'], ['webpack']);
   gulp.watch(['src/css/*.scss'], ['sass']);
   gulp.watch(['src/index.html'], ['copy-html']);
 });
 
 gulp.task('webpack', function() {
-  webpackConfig.devtool = 'cheap-module-eval-source-map';
-  return gulp.src(['src/js/index.js'])
+  return gulp.src(['src/js/index.tsx'])
     .pipe(webpack(webpackConfig))
     .pipe(gulp.dest('build/'))
     .pipe(connect.reload());

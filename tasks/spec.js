@@ -1,18 +1,19 @@
 var gulp = require('gulp');
 var webpack = require('webpack-stream');
-var eslint = require('gulp-eslint');
+var tslint = require('gulp-tslint');
 var jasmine = require('gulp-jasmine-browser');
 var _ = require('lodash');
 
 var webpackConfig = require('../webpack.config.js');
 
-var jasmineSrcFiles = ['spec/helpers/spec-helper.js', 'spec/**/*_spec.js'];
+var jasmineSrcFiles = ['spec/helpers/spec-helper.ts', 'spec/**/*_spec.ts'];
 
 gulp.task('lint', function() {
-  return gulp.src(['src/js/*.js', './*.js', 'spec/**/*.js'])
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
+  return gulp.src(['src/js/**/*.tsx'])
+    .pipe(tslint({
+      formatter: 'stylish'
+    }))
+    .pipe(tslint.report());
 });
 
 gulp.task('jasmine-phantom', function() {
