@@ -1,36 +1,38 @@
 import * as React from 'react';
 import { ColorTile } from 'components/color-tile';
+import { SelectableColorTile } from 'containers/selectable-color-tile';
 import { Color } from 'classes/color';
 import { ColorFactory } from 'classes/color-factory';
 
 interface ColorGridProps {
+  baseColor: Color
 }
 
 export class ColorGrid extends React.Component<ColorGridProps, {}> {
   public render() {
     let colorFactory = new ColorFactory();
 
-    let baseColor = new Color(100, 110, 170);
+    let { baseColor } = this.props;
     let modifier = 10;
 
     return (
       <div>
         <div>
-          <ColorTile 
+          <SelectableColorTile 
             color={colorFactory.colorWithModification(baseColor, -modifier * 2, 0, 0)}>
-          </ColorTile>
-          <ColorTile 
+          </SelectableColorTile>
+          <SelectableColorTile 
             color={colorFactory.colorWithModification(baseColor, -modifier, 0, 0)}>
-          </ColorTile>
-          <ColorTile 
+          </SelectableColorTile>
+          <SelectableColorTile 
             color={baseColor}>
-          </ColorTile>
-          <ColorTile 
+          </SelectableColorTile>
+          <SelectableColorTile 
             color={colorFactory.colorWithModification(baseColor, modifier, 0, 0)}>
-          </ColorTile>
-          <ColorTile 
+          </SelectableColorTile>
+          <SelectableColorTile 
             color={colorFactory.colorWithModification(baseColor, modifier * 2, 0, 0)}>
-          </ColorTile>
+          </SelectableColorTile>
         </div>
       </div>
     );

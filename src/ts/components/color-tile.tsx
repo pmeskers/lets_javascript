@@ -1,13 +1,16 @@
 import * as React from 'react';
+import * as _ from 'lodash';
+
 import { Color } from 'classes/color';
 
-interface ColorTileProps {
-  color: Color
+export interface ColorTileProps {
+  color: Color;
+  onTileClick: any;
 }
 
 export class ColorTile extends React.Component<ColorTileProps, {}> {
   public render() {
-    let { color } = this.props;
+    let { color, onTileClick } = this.props;
     let styleRules = {
       backgroundColor: color.getStyleString(),
       width: '100px',
@@ -18,12 +21,8 @@ export class ColorTile extends React.Component<ColorTileProps, {}> {
     return (
       <div 
         style={styleRules}
-        onClick={this.onTileClick.bind(this)}>
+        onClick={_.partial(onTileClick, color)}>
       </div>
     );
-  }
-
-  private onTileClick() {
-    console.log('u clicked it', this.props.color);
   }
 }
