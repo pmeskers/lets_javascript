@@ -11,7 +11,7 @@ let store = createStore(colorPicker);
 function run() {
   ReactDOM.render(
     <Provider store={store}>
-      <App title='welcome to typescript.'/>
+      <App></App>
     </Provider>,
     document.getElementById('app')
   );
