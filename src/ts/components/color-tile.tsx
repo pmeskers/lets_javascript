@@ -1,5 +1,5 @@
-import * as React from 'react';
 import * as _ from 'lodash';
+import * as React from 'react';
 
 import { Color } from 'classes/color';
 
@@ -13,13 +13,13 @@ export class ColorTile extends React.Component<ColorTileProps, {}> {
     let { color, onTileClick } = this.props;
     let styleRules = {
       backgroundColor: color.getStyleString(),
-      width: '100px',
+      display: 'inline-block',
       height: '100px',
-      display: 'inline-block'
+      width: '100px',
     };
 
     return (
-      <div 
+      <div
         style={styleRules}
         onClick={_.partial(onTileClick, color)}>
       </div>

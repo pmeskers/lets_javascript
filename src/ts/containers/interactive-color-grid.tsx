@@ -4,9 +4,9 @@ import { ColorGrid } from 'components/color-grid';
 
 const mapStateToProps = (state: any) => {
   return {
-    baseColor: state.selectedColor
-  }
-}
+    baseColor: state.selectedColor,
+  };
+};
 
 const InteractiveColorGrid = connect(
   mapStateToProps

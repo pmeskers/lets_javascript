@@ -1,10 +1,10 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Provider } from 'react-redux'
+import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
-import { App } from 'components/app';
 import { colorPicker } from './reducers';
+import { App } from 'components/app';
 
 let store = createStore(colorPicker);
 

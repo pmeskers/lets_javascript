@@ -1,9 +1,9 @@
 import { shallow } from 'enzyme';
 import * as React from 'react';
 
+import { Color } from 'classes/color';
 import { ColorGrid } from 'components/color-grid';
 import { SelectableColorTile } from 'containers/selectable-color-tile';
-import { Color } from 'classes/color';
 
 describe('ColorGrid', () => {
   let fixture: any;

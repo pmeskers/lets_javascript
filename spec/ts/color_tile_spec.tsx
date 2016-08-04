@@ -1,8 +1,8 @@
 import { shallow } from 'enzyme';
 import * as React from 'react';
 
-import { ColorTile } from 'components/color-tile';
 import { Color } from 'classes/color';
+import { ColorTile } from 'components/color-tile';
 
 describe('ColorTile', () => {
   let fixture: any;
