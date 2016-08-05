@@ -4,11 +4,18 @@ module.exports = {
   output: {
     filename: 'index.js'
   },
+  devtool: "source-map",
   module: {
     loaders: [
       {
         test: /\.tsx?$/,
         loader: 'ts-loader'
+      }
+    ],
+    preLoaders: [
+      {
+        test: /\.js$/,
+        loader: "source-map-loader"
       }
     ]
   },
